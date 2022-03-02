@@ -20,4 +20,9 @@ Route::get('/', function () {
     ];
 
     return view('home', $data);
+})->name('home');
+
+Route::get('/header', function () {
+    $url = route('home');
+    return view('header', compact('url'));
 });
